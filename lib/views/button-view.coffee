@@ -26,8 +26,8 @@ class ButtonView extends View
     @showOutputButton.on 'mousedown', (e) ->
       e.preventDefault();
 
-    @disposables.add(atom.tooltips.add(@killButton, {title: "Stop/Discard"}));
-    @disposables.add(atom.tooltips.add(@showOutputButton, {title: "Show output"}));
+    @disposables.add(atom.tooltips.add(@killButton[0], {title: "Stop/Discard"}));
+    @disposables.add(atom.tooltips.add(@showOutputButton[0], {title: "Show output"}));
 
   destroy: ->
     @disposables.dispose();
